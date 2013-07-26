@@ -114,6 +114,10 @@ on boot
     chmod 0660 /dev/i2c-2
     chown media media /dev/i2c-2
 
+	# change permissions for Tiler driver
+	chmod 0777 /dev/tiler
+	chmod 0777 /dev/dmm 
+
     # Revert the boost_timeout to the default value of 3 sec. 
     # Note this won't affect the prev boost request for boot time reduction
     write /sys/devices/system/cpu/cpufreq/hotplug/boost_timeout 3000000
